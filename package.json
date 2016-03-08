@@ -1,0 +1,47 @@
+{
+  "name": "react-stated",
+  "version": "0.0.1",
+  "description": "Stateful wrapper component to externalize uncontrolled logic",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "typings.json"
+  ],
+  "scripts": {
+    "build": "tsc -d typings/main.d.ts src/index.tsx  --outDir . --jsx react --module commonjs --removeComments",
+    "prepublish": "typings install && npm run build",
+    "ci-test": "npm run test",
+    "pretest": "tsc",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alitaheri/react-stated.git"
+  },
+  "keywords": [
+    "state",
+    "stateful",
+    "wrapper",
+    "react"
+  ],
+  "author": "Ali Taheri Moghaddar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alitaheri/react-stated/issues"
+  },
+  "homepage": "https://github.com/alitaheri/react-stated#readme",
+  "peerDependencies": {
+    "react": ">=0.4.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.3.4",
+    "chai": "^3.5.0",
+    "jsdom": "^8.0.4",
+    "mocha": "^2.4.5",
+    "react": "^0.14.7",
+    "react-addons-test-utils": "^0.14.7",
+    "typescript": "^1.7.5",
+    "typings": "^0.6.8"
+  }
+}
